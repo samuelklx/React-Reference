@@ -1,0 +1,57 @@
+<!-- 
+# Nesting Components
+As with other languages and frameworks, React allows you to create nested components. This means that you can create a component that uses other components inside it. This is a powerful feature of React, as it allows you to break down your UI into smaller, reusable pieces. By nesting components, you can create complex UIs that are easy to manage and maintain.
+
+This example will demonstrate how to create a nested component structure in React. We will create a `Header` component that returns an h1 element, and then we will use this component inside another component called `HomePage`. The `HomePage` component will render the `Header` component to the DOM. This is a simple example of how to nest components in React.
+-->
+
+<html>
+
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+    <!-- This is the JSX script from the previous example, but now we will create a nested component structure. We will create a `Header` component that returns an h1 element, and then we will use this component inside another component called `App`. The `App` component will render the `Header` component to the DOM. This is a simple example of how to nest components in React.
+<script type="text/jsx">
+function Header() { 
+            return (
+element with the text "Develop. Preview. Ship."
+                <h1>Develop. Preview. Ship.</h1>
+            );
+        }
+        const root = ReactDOM.createRoot(app);
+        root.render(<Header />); 
+    </script> 
+-->
+    <script type="text/jsx">
+    
+    // The Header component will return an h1 element with the text "Develop. Preview. Ship."
+        function Header() {
+        return
+            <h1>Develop. Preview. Ship.</h1>;
+    }
+
+    {/* The HomePage component will be responsible for rendering the Header component. This is where we will nest the Header component inside the HomePage component. */}
+    function HomePage() {
+        return (
+            <div>
+                {/* Nesting the Header component inside the HomePage component */}
+                <Header />
+            </div>
+        );
+    }
+
+    {/* Now we can use the HomePage component to render the heading to the DOM. This will replace the previous example where we used the Header component directly.*/}
+    const root = ReactDOM.createRoot(app);  
+    {/* Create a root for the React app. This will be the entry point for our React component.*/ }
+    
+    
+    {/* This will render the Header component to the DOM, which will display "Develop. Preview. Ship." on the page. */}
+    root.render(<HomePage />); 
+    </script>
+</body>
+
+</html>

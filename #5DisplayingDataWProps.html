@@ -1,0 +1,98 @@
+<!-- 
+# Displaying Data with Props
+
+Props (short for properties) are the React equivalent to arguments passed to a function. They allow you to pass data from one component to another, making it easy to share information between components. In this example, we will create a simple Header component that displays a heading, and then we will use that component in a HomePage component.
+
+In this example, we will create a Header component that takes a title prop and displays it as an h1 element. We will then use this Header component in a HomePage component, passing the title prop to it.
+-->
+
+<html>
+
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/jsx">
+        {/* The Header() component is a functional component that takes a single prop called 'title'. 'title' was passed from Header() to the parent component HomePage().
+        The `title=` tag will set the title prop (parameter/argument) in Header() */}
+        function Header({ title }) {
+            console.log(title);
+            return <h1>{title}</h1>;
+        }
+
+        {/* The HomePage component uses the Header component and passes a title prop to it. This allows the Header component to display the title passed from the HomePage. */}
+        function HomePage() {
+            return (
+                <div>
+                    <Header title="React" />
+                </div>
+            );
+        }
+        const root = ReactDOM.createRoot(app);
+        root.render(<HomePage />);
+    </script>
+</body>
+</html>
+<!-- 
+More examples of how to code the above script from the Next.js React documentation:
+
+You can think of curly braces as a way to enter "JavaScript land" while you are in "JSX land". You can add any JavaScript expression (something that evaluates to a single value) inside curly braces. For example:
+
+An object property with dot notation:
+function Header(props) {
+return <h1>{props.title}</h1>;
+}
+
+A template literal:
+function Header({ title }) {
+    return <h1>{`Cool ${title}`}</h1>;
+}
+
+The returned value of a function:
+function createTitle(title) {
+    if (title) {
+        return title;
+    } else {
+        return 'Default title';
+    }
+}
+
+function Header({ title }) {
+    return <h1>{createTitle(title)}</h1>;
+}
+
+    Or ternary operators:
+function Header({ title }) {
+    return <h1>{title ? title : 'Default Title'}</h1>;
+}
+
+You can now pass any string to your title prop, or, if you used the ternary operator, you could even not pass a title prop at all, since you've accounted for the default case in your component:
+example.js
+
+function Header({ title }) {
+    return <h1>{title ? title : 'Default title'}</h1>;
+}
+
+function HomePage() {
+    return (
+        <div>
+        <Header />
+        </div>
+    );
+}
+
+Your component now accepts a generic title prop which you can reuse in different parts of your application. All you need to do is change the title string:
+index.html
+
+function HomePage() {
+    return (
+        <div>
+        <Header title="React" />
+        <Header title="A new title" />
+        </div>
+    );
+}
+-->
+

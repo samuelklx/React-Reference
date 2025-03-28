@@ -1,0 +1,50 @@
+<!-- 
+# React Intro Example
+React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page. Components can be reused throughout your app, which makes it easier to maintain and update your code.
+
+In React, components are typically written as JavaScript functions or classes. They can accept inputs called "props" (short for properties) and return a React element that describes how a section of the UI should look. React components are JavaScript functions that return markup. This markup is typically written in a syntax called JSX, which allows you to write HTML-like code in your JavaScript files. When the component is rendered, React will create a corresponding DOM element based on the returned markup.
+
+In this example, we will create a simple React component that displays a heading with the text "Develop. Preview. Ship." using the React library. We will use the ReactDOM library to render our component to the DOM.
+
+For more information on how react works, you can check out the official React documentation: https://reactjs.org/docs/getting-started.html 
+
+-->
+
+<html>
+
+<body>
+    <div id="app"></div>
+    <!-- The React library is included via a CDN (Content Delivery Network) link. This allows us to use React in our HTML file without having to install it locally. -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- The ReactDOM library is also included via a CDN link. This library provides methods for interacting with the DOM and rendering React components to the page. -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel is a JavaScript compiler that allows us to use the latest JavaScript features, including JSX syntax, in our code. We include it via a CDN link so we can write our React components using JSX. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Now we can use the React and ReactDOM libraries to create and render our React components. -->
+
+    <!-- This was the original javascript that was included in #1TheDOMExample. 
+    This is what is being replaced by our new react component -->
+    <!-- <script type=""text/javascript"> 
+        
+        // const app = document.getElementById('app');
+        // const header = document.createElement('h1');
+        // const text = 'Develop. Preview. Ship.';
+        // const headerContent = document.createTextNode(text);
+        // header.appendChild(headerContent); 
+        // app.appendChild(header); 
+        </script> -->
+
+    <!-- This is the new script. Note that the type is now JSX, rather than JavaScript. -->
+    <!-- JSX is a syntax extension for JavaScript that allows you to describe your UI in a familiar HTML-like syntax.-->
+    <script type="text/jsx">
+        const app = document.getElementById('app');
+        const root = ReactDOM.createRoot(app); // Create a root for the React app. This will be the entry point for our React component.
+        root.render(<h1>Develop. Preview. Ship.</h1>); 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!-- The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
+A web page is a document that can be either displayed in the browser window or as the HTML source. In both cases, it is the same document but the Document Object Model (DOM) representation allows it to be manipulated. As an object-oriented representation of the web page, it can be modified with a scripting language such as JavaScript. -->
+
+
+<html>
+
+<body>
+    <div id="app"></div>
+    <script type="text/javascript">
+        
+        // Select div element with 'app' id from the DOM
+        // This will be the root element where we will render our React component
+        const app = document.getElementById('app')
+
+        // Create a new h1 element using the DOM API
+        // This will create an h1 element that we can use to display a heading in our app
+        const header = document.createElement('h1');
+
+        //create new text node using the DOM API
+        // This will create a text node with the content 'Develop. Preview. Ship.'
+        const text = 'Develop. Preview. Ship.';
+        const headerContent = document.createTextNode(text);
+
+        // append the text node to the h1 element using the DOM API
+        // This will add the text 'Develop. Preview. Ship.' to the h1 element we created earlier
+        // Now the h1 element will display 'Develop. Preview. Ship.' when rendered in the browser
+        header.appendChild(headerContent);
+
+        // Place the h1 element inside the 'app' div using the DOM API
+        // This will add the h1 element (with the text 'Develop. Preview. Ship.') to the 'app' div in the DOM
+        app.appendChild(header);
+    </script>
+</body>
+
+</html>

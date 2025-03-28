@@ -1,0 +1,46 @@
+<!-- 
+#Components, Props, and State
+
+In React, components are the building blocks of your application. They allow you to break down User Interfaces into smaller, reusable pieces. Each component can have its own state and props, which makes it easy to manage and pass data between components.
+-->
+
+<!-- 
+From Next.js documentation:
+Components allow you to build self-contained, reusable snippets of code. If you think of components as LEGO bricks, you can take these individual bricks and combine them together to form larger structures. If you need to update a piece of the UI, you can update the specific component or brick.
+
+In other words, Components are functions. Just like functions in other languages, they take inputs ("props" in React) and return outputs (which is usually some form of UI). This allows you to create modular, reusable code that can be easily maintained and updated.
+-->
+
+<!-- 
+Below is the script from the previous example, but now we will create a functional component called `Header` that returns a React element. We will then use this component to render the heading "Develop. Preview. Ship." to the DOM. This is a simple example of how to create and use components in React.
+-->
+<html>
+
+<body>
+    <div id="app"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- Important to note, React Components are just JavaScript! -->
+<script type="text/jsx">
+        const app = document.getElementById('app');
+
+        // React component names should always be capitalized. This is a convention in React that helps differentiate between built-in HTML elements (like div, span, etc.) and custom components that you create.
+        function Header() {
+            return (
+                // This is a simple functional component that returns a React element. It uses JSX syntax to create an h1 element with the text "Develop. Preview. Ship."
+                <h1>Develop. Preview. Ship.</h1>
+            );
+        }
+
+        const root = ReactDOM.createRoot(app);
+        // Now we can use the Header component to render the heading to the DOM. This will replace the previous example where we used the DOM API to create and append elements.
+        
+        // When you call React Components  they should be encapsulated in HTML tags. This is because React uses the concept of a "virtual DOM" to efficiently update and render components. By encapsulating components in HTML tags, React can track changes and update the DOM as needed.
+        root.render(<Header />); 
+    </script>
+
+</body>
+
+</html>

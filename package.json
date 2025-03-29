@@ -1,0 +1,18 @@
+{
+  "_comment": "This file contains the dependencies for the React-Reference project.",
+  "name": "react-reference",
+  "version": "1.0.0",
+  "description": "A reference project for React and Next.js",
+  "main": "page.js",
+  "scripts": {
+    "_comment": "Scripts to run the project",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "^15.2.4",
+    "pnpm": "^10.7.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-reference": "file:"
+  }
+}

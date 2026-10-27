@@ -9,49 +9,47 @@ The 'HomePage' component will render the 'Header' component to the DOM.
 -->
 
 <html>
-
-<body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <body>
+        <div id="app"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        
+        <!-- This is the JSX script from the previous example, but now we will create a nested component structure. 
+        The following willl create a 'Header' component that returns an 'h1' element. This component will be used inside another component called 'App'.
+        The 'App' component will render the 'Header' component to the DOM.
     
-    <!-- This is the JSX script from the previous example, but now we will create a nested component structure. 
-    The following willl create a 'Header' component that returns an 'h1' element. This component will be used inside another component called 'App'.
-    The 'App' component will render the 'Header' component to the DOM.
-
-    <script type="text/jsx">
-    function Header() { 
-            return (
-            element with the text "Develop. Preview. Ship."
-                <h1>Develop. Preview. Ship.</h1>
-            );
-        }
-        const root = ReactDOM.createRoot(app);
-        root.render(<Header />); 
-    </script> 
-    -->
-    <script type="text/jsx">
-        function Header() {            // The Header component will return an h1 element with the text "Develop. Preview. Ship."
-            return
-                <h1>Develop. Preview. Ship.</h1>;
-        }
-
-        /* The 'HomePage' component will be responsible for rendering the 'Header' component, as it is now nested within the 'HomePage' component.*/
-        function HomePage() {
-            return (
-                <div>
-                    <Header/> {/* This will return the header from the 'Header' component */} 
-                </div>
-            );
-        }
-
-        {/* Now we can use the HomePage component to render the heading to the DOM. This will replace the previous example where we used the Header component directly.*/}
-        const root = ReactDOM.createRoot(app);    {/* Create a root for the React app. This will be the entry point for our React component.*/ }
+        <script type="text/jsx">
+        function Header() { 
+                return (
+                element with the text "Develop. Preview. Ship."
+                    <h1>Develop. Preview. Ship.</h1>
+                );
+            }
+            const root = ReactDOM.createRoot(app);
+            root.render(<Header />); 
+        </script> 
+        -->
+        <script type="text/jsx">
+            function Header() {            // The Header component will return an h1 element with the text "Develop. Preview. Ship."
+                return
+                    <h1>Develop. Preview. Ship.</h1>;
+            }
     
-        {/* This will render the Header component to the DOM, which will display "Develop. Preview. Ship." on the page. */}
-        root.render(<HomePage />); 
-    </script>
-</body>
-
+            /* The 'HomePage' component will be responsible for rendering the 'Header' component, as it is now nested within the 'HomePage' component.*/
+            function HomePage() {
+                return (
+                    <div>
+                        <Header/> {/* This will return the header from the 'Header' component */} 
+                    </div>
+                );
+            }
+    
+            {/* Now we can use the HomePage component to render the heading to the DOM. This will replace the previous example where we used the Header component directly.*/}
+            const root = ReactDOM.createRoot(app);    {/* Create a root for the React app. This will be the entry point for our React component.*/ }
+        
+            {/* This will render the Header component to the DOM, which will display "Develop. Preview. Ship." on the page. */}
+            root.render(<HomePage />); 
+        </script>
+    </body>
 </html>

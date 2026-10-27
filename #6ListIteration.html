@@ -6,39 +6,37 @@ The `map()` method is a built-in JavaScript function that allows iteration over 
 -->
 
 <html>
-
-<body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/jsx">
-        function Header({ title }) {
-            console.log(title);
-            return <h1>{title}</h1>;
-        }
-        function HomePage() {
-            const names = ['Ada Lovelace', 'Grace Hopper', 'Marie Curie', 'Rosalind Franklin'];
-            return (
-                <div>
-                    <Header title="Develop. Preview. Ship" />
-                    <ul>
-                        {/* array.map() is used here to create a list of <li> elements for each name in the 'names' array. */}
-                        {names.map((name) => (
-                        <li key={name}>{name}</li>
-                        {/* The key prop is a special string attribute that React uses to identify which items have changed, are added, or are removed. 
-                        It helps React optimize the rendering process by keeping track of each element in the list. 
-                        In this case, the 'name' is the 'key,' but in practice, a unique identifier for each item in the list will be used (e.g. an ID number). */}
-                        ))}
-                    </ul>
-                    {/* The above code will create an unordered list of names. Each name in the names array will be displayed as a list item. */}
-                </div>
-            );
-        }
-        const root = ReactDOM.createRoot(app);
-        root.render(<HomePage />);
-    </script>
-</body>
-
+    <body>
+        <div id="app"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <script type="text/jsx">
+            function Header({ title }) {
+                console.log(title);
+                return <h1>{title}</h1>;
+            }
+            function HomePage() {
+                const names = ['Ada Lovelace', 'Grace Hopper', 'Marie Curie', 'Rosalind Franklin'];
+                return (
+                    <div>
+                        <Header title="Develop. Preview. Ship" />
+                        <ul>
+                            {/* array.map() is used here to create a list of <li> elements for each name in the 'names' array. */}
+                            {names.map((name) => (
+                            <li key={name}>{name}</li>
+                            {/* The key prop is a special string attribute that React uses to identify which items have changed, are added, or are removed. 
+                            It helps React optimize the rendering process by keeping track of each element in the list. 
+                            In this case, the 'name' is the 'key,' but in practice, a unique identifier for each item in the list will be used (e.g. an ID number). */}
+                            ))}
+                        </ul>
+                        {/* The above code will create an unordered list of names. Each name in the names array will be displayed as a list item. */}
+                    </div>
+                );
+            }
+            const root = ReactDOM.createRoot(app);
+            root.render(<HomePage />);
+        </script>
+    </body>
 </html>

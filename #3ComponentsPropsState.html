@@ -31,9 +31,10 @@ This is a simple example of how components are created and used in React.
 <!--REACT COMPONENTS ARE JUST JAVASCRIPT! -->
 <script type="text/jsx">
     const app = document.getElementById('app');
-    <!-- This is a simple functional component that returns a React element. 
-        It uses JSX syntax to create an h1 element with the text "Develop. Preview. Ship." -->
-        
+    
+    /*This is a simple functional component that returns a React element. 
+    It uses JSX syntax to create an h1 element with the text "Develop. Preview. Ship." */  
+    
     function Header() {        // React component names should always be capitalized. This is a convention in React that helps differentiate between built-in HTML elements (like div, span, etc.) and custom components that you create.
         return (
             <h1>Develop. Preview. Ship.</h1>
@@ -41,10 +42,11 @@ This is a simple example of how components are created and used in React.
     }                        
     
     const root = ReactDOM.createRoot(app);
-    // Now we can use the Header component to render the heading to the DOM. This will replace the previous example where we used the DOM API to create and append elements.
-        
-    // When you call React Components  they should be encapsulated in HTML tags. This is because React uses the concept of a "virtual DOM" to efficiently update and render components. By encapsulating components in HTML tags, React can track changes and update the DOM as needed.
-    root.render(<Header />); 
+    
+    /* Now we can use the Header component to render the heading to the DOM. This will replace the previous example where we used the DOM API to create and append elements.    
+    When you call React Components  they should be encapsulated in HTML tags. This is because React uses the concept of a "virtual DOM" to efficiently update and render components. 
+    By encapsulating components in HTML tags, React can track changes and update the DOM as needed. */
+    root.render(<Header />);
 </script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <!-- 
 #7 State and Event Handling
 
-Interactivity is a key part of modern web applications, in that we often need to respond to user actions such as clicks, form submissions, and other events. Interactivity is added through states and event handlers in React. In this section, we will explore how to use state and event handling in React components.
+Interactivity is a key part of modern web applications. Interactivity is added through states and event handlers in React. 
+This section explores how to use state and event handling in React components.
 -->
 
 <html>
@@ -12,20 +13,20 @@ Interactivity is a key part of modern web applications, in that we often need to
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
         <script type="text/jsx">
-        function Header({ title }) {
-            console.log(title);
-            return <h1>{title}</h1>;
-        }
-        
-        function HomePage() {
-            const names = ['Ada Lovelace', 'Grace Hopper', 'Marie Curie', 'Rosalind Franklin'];
-            
-            {/* Event handlers are functions that, as their name suggests, handle the events that event listeners are waiting for. In React, you can add event handlers to elements using the on[event] attribute, where [event] is the name of the event you want to listen for. For example, onClick, onChange, onSubmit, etc. */}        
-            function handleClick() {
-                console.log("increment like count")
+            function Header({ title }) {
+                console.log(title);
+                return <h1>{title}</h1>;
             }
+            {/* Here is the 'HomePage' function again, but this time it will implement event listeners to handle a click from a user's mouse */}
+            function HomePage() {
+                const names = ['Ada Lovelace', 'Grace Hopper', 'Marie Curie', 'Rosalind Franklin'];
+            
+                {/* Event handlers are functions that, as their name suggests, handle the events that event listeners are waiting for. In React, you can add event handlers to elements using the on[event] attribute, where [event] is the name of the event you want to listen for. For example, onClick, onChange, onSubmit, etc. */}        
+                function handleClick() {
+                    console.log("increment like count")
+                }
                     
-            return (
+                return (
                 <div>
                     <Header title="Develop. Preview. Ship" />
                     {/* This code will create an unordered list of names. Each name in the names array will be displayed as a list item. */}
@@ -35,14 +36,19 @@ Interactivity is a key part of modern web applications, in that we often need to
                         ))}
                     </ul>
                     
-                    {/* Add a button with an event listener (onClick) to respond by calling the handleClick event handler when the button is clicked. Event names are always camelCased.  There are many possible events to respond to.  */}
+                    {/* Add a button with an event listener (onClick) to respond by calling the handleClick event handler when the button is clicked. 
+                    Event names are always camelCased.*/}
                     <button onClick={handleClick}>Like</button>
                     
                 </div>
-            );
-        }
-        const root = ReactDOM.createRoot(app);
-        root.render(<HomePage />);
+                );
+            }
+            const root = ReactDOM.createRoot(app);
+            root.render(<HomePage />);
         </script>
     </body>
 </html>
+<!-- 
+This is just one example of an event listener. 
+There are many other kinds as well, including (but nowhere near limited to) one for a cursor mousing over an object, when a window is resized, or keystroke input.
+-->

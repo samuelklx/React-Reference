@@ -24,13 +24,13 @@ The `map()` method is a built-in JavaScript function that allows iteration over 
                 <div>
                     <Header title="Develop. Preview. Ship" />
                     <ul>
-                    {/* array.map() is used here to create a list of <li> elements for each name in the 'names' array. */}
-                    {names.map((name) => (
+                        {/* array.map() is used here to create a list of <li> elements for each name in the 'names' array. */}
+                        {names.map((name) => (
                         <li key={name}>{name}</li>
-                        /* The key prop is a special string attribute that React uses to identify which items have changed, are added, or are removed. 
+                        {/* The key prop is a special string attribute that React uses to identify which items have changed, are added, or are removed. 
                         It helps React optimize the rendering process by keeping track of each element in the list. 
-                        In this case, the 'name' is the 'key,' but in practice, a unique identifier for each item in the list will be used (e.g. an ID number). */ 
-                    ))}
+                        In this case, the 'name' is the 'key,' but in practice, a unique identifier for each item in the list will be used (e.g. an ID number). */}
+                        ))}
                     </ul>
                     {/* The above code will create an unordered list of names. Each name in the names array will be displayed as a list item. */}
                 </div>

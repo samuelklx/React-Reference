@@ -6,35 +6,33 @@ A simple 'Header' component that displays a heading (using a 'title' prop) is cr
 -->
 
 <html>
-
-<body>
-    <div id="app"></div>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <script type="text/jsx">
-        {/* The Header() component is a functional component that takes a single prop called 'title'. 'title' was passed from Header() to the parent component HomePage().
-        The `title=` tag will set the title prop (parameter/argument) in Header() */}
-        function Header({ title }) {
-            console.log(title);
-            return 
-                <h1>{title}</h1>;
-        }
-
-        {/* 'HomePage' calls 'Header' and passes a title prop to it. This allows the 'Header' to display the title passed from the 'HomePage.' */}
-        function HomePage() {
-            return (
-                <div>
-                    <Header title="React" />
-                </div>
-            );
-        }
-        const root = ReactDOM.createRoot(app);
-        root.render(<HomePage />);
-    </script>
-</body>
+    <body>
+        <div id="app"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
+        <script type="text/jsx">
+            {/* The Header() component is a functional component that takes a single prop called 'title'. 'title' was passed from Header() to the parent component HomePage().
+            The `title=` tag will set the title prop (parameter/argument) in Header() */}
+            function Header({ title }) {
+                console.log(title);
+                return 
+                    <h1>{title}</h1>;
+            }
+    
+            {/* 'HomePage' calls 'Header' and passes a title prop to it. This allows the 'Header' to display the title passed from the 'HomePage.' */}
+            function HomePage() {
+                return (
+                    <div>
+                        <Header title="React" />
+                    </div>
+                );
+            }
+            const root = ReactDOM.createRoot(app);
+            root.render(<HomePage />);
+        </script>
+    </body>    
 </html>
 <!-- 
 More examples of how to code the above script from the Next.js React documentation:

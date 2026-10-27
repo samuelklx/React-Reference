@@ -13,7 +13,9 @@ JavaScript is a versatile programming language that powers the dynamic behavior 
 ---
 
 ###React ###
-React is a declarative, component-based library that simplifies the process of building interactive UIs. It uses JavaScript and JSX (a syntax extension for JavaScript) to define components and their behavior. React's key features include:
+React is a declarative, component-based library that simplifies the process of building interactive UIs. It uses JavaScript to define components and their behavior.
+
+React's key features include:
 - **Components**: Reusable building blocks for UI.
 - **Props**: Mechanism for passing data between components.
 - **State**: Local data storage for components to manage dynamic behavior.
@@ -131,9 +133,7 @@ This repository contains a series of files that progressively introduce React an
 ---
 
 ## HOW TO USE ##
-Each HTML file is self-contained and includes the necessary React and Babel libraries via CDN. Open the files in a browser to see the examples in action. The inline comments in the scripts provide detailed explanations of the code.
+Each HTML file is self-contained and includes the necessary React and Babel libraries via CDN. Open the files in a browser to see the examples in action. The inline comments in each file provide detailed explanations of what the code is for and how it executes.
 
 For Next.js examples, run the development server using `npm run dev` or `yarn dev` and navigate to the appropriate routes in your browser.
-
-This repository is a great starting point for anyone looking to learn React, Next.js, and understand the distinction between Server and Client Components.
 

@@ -17,42 +17,39 @@ Check out the official React documentation for further info on how this works: h
 -->
 
 <html>
-
-<body>
-    <div id="app"></div>
-    <!-- The React library is included via a CDN (Content Delivery Network) link. This allows us to use React in our HTML file without having to install it locally. -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-
-    <!-- The ReactDOM library is also included via a CDN link. This library provides methods for interacting with the DOM and rendering React components to the page. -->
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <!-- Babel is a JavaScript compiler that allows the use of the latest JavaScript features, including JSX syntax, in the code. It is included via a CDN link so React components can be written using JSX. -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- Now the React and ReactDOM libraries will create and render our React components. -->
-
-    <!-- This was the original javascript that was included in #1TheDOMExample. 
-    This is what is being replaced by our new react component -->
-    <!-- 
-    <script type=""text/javascript">
-        const app = document.getElementById('app');
-        const header = document.createElement('h1');
-        const text = 'Develop. Preview. Ship.';
-        const headerContent = document.createTextNode(text);
-            
-        header.appendChild(headerContent); 
-        app.appendChild(header); 
-    </script>
-    -->
-
-    <!-- This is the new script. Note that the type is now JSX, rather than JavaScript. -->
-    <!-- JSX is a syntax extension for JavaScript that allows for description of the UI in a familiar HTML-like syntax.-->
-    <script type="text/jsx">
-        const app = document.getElementById('app');
-        const root = ReactDOM.createRoot(app);         // This line creates a root for the React app. This will be the entry point for our React component.
-        root.render(<h1>Develop. Preview. Ship.</h1>); 
-    </script>
-
-</body>
-
+    <body>
+        <div id="app"></div>
+        <!-- The React library is included via a CDN (Content Delivery Network) link. This allows us to use React in our HTML file without having to install it locally. -->
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    
+        <!-- The ReactDOM library is also included via a CDN link. This library provides methods for interacting with the DOM and rendering React components to the page. -->
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+        <!-- Babel is a JavaScript compiler that allows the use of the latest JavaScript features, including JSX syntax, in the code. It is included via a CDN link so React components can be written using JSX. -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+        <!-- Now the React and ReactDOM libraries will create and render our React components. -->
+    
+        <!-- This was the original javascript that was included in #1TheDOMExample. 
+        This is what is being replaced by our new react component -->
+        <!-- 
+        <script type=""text/javascript">
+            const app = document.getElementById('app');
+            const header = document.createElement('h1');
+            const text = 'Develop. Preview. Ship.';
+            const headerContent = document.createTextNode(text);
+                
+            header.appendChild(headerContent); 
+            app.appendChild(header); 
+        </script>
+        -->
+    
+        <!-- This is the new script. Note that the type is now JSX, rather than JavaScript. -->
+        <!-- JSX is a syntax extension for JavaScript that allows for description of the UI in a familiar HTML-like syntax.-->
+        <script type="text/jsx">
+            const app = document.getElementById('app');
+            const root = ReactDOM.createRoot(app);         // This line creates a root for the React app. This will be the entry point for our React component.
+            root.render(<h1>Develop. Preview. Ship.</h1>); 
+        </script>
+    </body>
 </html>

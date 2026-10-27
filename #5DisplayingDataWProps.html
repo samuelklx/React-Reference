@@ -1,9 +1,8 @@
 <!-- 
 # Displaying Data with Props
 
-Props (short for properties) are the React equivalent to arguments passed to a function. They allow you to pass data from one component to another, making it easy to share information between components. In this example, we will create a simple Header component that displays a heading, and then we will use that component in a HomePage component.
-
-In this example, we will create a Header component that takes a title prop and displays it as an h1 element. We will then use this Header component in a HomePage component, passing the title prop to it.
+Props (short for properties) are the React equivalent to arguments passed to a function. They allow data to be passed from one component to another, making it easy to share information between components. 
+A simple 'Header' component that displays a heading (using a 'title' prop) is created in this file, which will be used in the 'HomePage' component.
 -->
 
 <html>
@@ -19,10 +18,11 @@ In this example, we will create a Header component that takes a title prop and d
         The `title=` tag will set the title prop (parameter/argument) in Header() */}
         function Header({ title }) {
             console.log(title);
-            return <h1>{title}</h1>;
+            return 
+                <h1>{title}</h1>;
         }
 
-        {/* The HomePage component uses the Header component and passes a title prop to it. This allows the Header component to display the title passed from the HomePage. */}
+        {/* 'HomePage' calls 'Header' and passes a title prop to it. This allows the 'Header' to display the title passed from the 'HomePage.' */}
         function HomePage() {
             return (
                 <div>
@@ -34,11 +34,10 @@ In this example, we will create a Header component that takes a title prop and d
         root.render(<HomePage />);
     </script>
 </body>
+    
 </html>
 <!-- 
 More examples of how to code the above script from the Next.js React documentation:
-
-You can think of curly braces as a way to enter "JavaScript land" while you are in "JSX land". You can add any JavaScript expression (something that evaluates to a single value) inside curly braces. For example:
 
 An object property with dot notation:
 function Header(props) {
@@ -94,5 +93,7 @@ function HomePage() {
         </div>
     );
 }
+
+Curly braces are used as a way to enter JavaScript code within JSX code. Any JavaScript expression can be used inside these curly braces
 -->
 
